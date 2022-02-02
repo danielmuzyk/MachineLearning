@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dx.css') }}">
+</head>
+<body>
+<h1>Prediction</h1>
+    {% if preds == 0%}
+<h1 style="background-color:DodgerBlue;">No heart disease</h1>
+    {%else%}
+<h1 style="background-color:Tomato;">You have heart disease</h1>
+    {%endif%}
+</body>
+</html>

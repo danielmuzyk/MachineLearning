@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+}</style>
+
+</head>
+<body>
+
+
+    <img src="static/polynomial_regression.png" class="float-end" style="width:800px;height:600px;">
+
+    <div class="container p-2 my-11 bg-dark text-white">
+        <form method="GET" action="{{url_for('help_doc')}}">
+        <h1>Heart disease prediction app</h1>
+        <p>Fill in the fields below, first follow documentation, click the button below</p>
+            <button type="submit"> help </button>
+        </form>
+    </div>
+    <div class="container p-1 my-11 bg-primary text-white" >
+        <form method="POST" action="{{url_for('form_access')}}">
+            age: <input type="number" name='age' placeholder="age" min="18" max="99" required="required"/>
+            sex: <input type="radio" id="male" name="sex" value="male" required="required"/>
+            <label for="male">male</label>
+            <input type="radio" id="female" name="sex" value="female" required="required"/>
+            <label for="female">female</label><br><br>
+            trestbps: <input type="number" id="trestbps" name="trestbps" min="80" max="300" required="required"/> chol: <input type="number" id="chol" name="chol" min="50" max="500" required="required"/><br><br>
+            fbs: <input type="number" id="fbs" name="fbs" min="0" max="1" required="required"/> thalach: <input type="number" id="thalach" name="thalach" min="50" max="300" required="required"/><br><br>
+            exang: <input type="number" id="exang" name="exang" min="0" max="1" required="required"/>oldpeak: <input type="number" id="oldpeak" name="oldpeak" min="0.5" max="4.5" step="0.01" required="required"/><br><br>
+            cp: <input type="radio" id="cp1" name="cp" value="1" required="required"/>
+            <label for="cp1">1</label>
+            <input type="radio" id="cp2" name="cp" value="2" required="required"/>
+            <label for="cp2">2</label>
+            <input type="radio" id="cp3" name="cp" value="3" required="required"/>
+            <label for="cp3">3</label>
+            <input type="radio" id="cp4" name="cp" value="4" required="required"/>
+            <label for="cp2">4</label><br>
+            ca: <input type="radio" id="ca0" name="ca" value="0" required="required"/>
+            <label for="ca0">0</label>
+            <input type="radio" id="ca1" name="ca" value="1" required="required"/>
+            <label for="ca1">1</label>
+            <input type="radio" id="ca2" name="ca" value="2" required="required"/>
+            <label for="ca2">2</label>
+            <input type="radio" id="ca3" name="ca" value="3" required="required"/>
+            <label for="ca3">3</label>
+            <input type="radio" id="ca4" name="ca" value="4" required="required"/>
+            <label for="ca4">4</label><br>
+            restecg: <input type="radio" id="restecg0" name="restecg" value="0" required="required"/>
+            <label for="restecg0">0</label>
+            <input type="radio" id="restecg1" name="restecg" value="1" required="required"/>
+            <label for="restecg1">1</label>
+            <input type="radio" id="restecg2" name="restecg" value="2" required="required"/>
+            <label for="restecg2">2</label><br>
+            slope: <input type="radio" id="slope0" name="slope" value="0" required="required"/>
+            <label for="slope0">0</label>
+            <input type="radio" id="slope1" name="slope" value="1" required="required"/>
+            <label for="slope1">1</label>
+            <input type="radio" id="slope2" name="slope" value="2" required="required"/>
+            <label for="slope2">2</label><br>
+            thal: <input type="radio" id="thal0" name="thal" value="0" required="required"/>
+            <label for="thal0">0</label>
+            <input type="radio" id="thal1" name="thal" value="1" required="required"/>
+            <label for="thal1">1</label>
+            <input type="radio" id="thal2" name="thal" value="2" required="required"/>
+            <label for="thal2">2</label>
+            <input type="radio" id="thal3" name="thal" value="3" required="required"/>
+            <label for="thal3">3</label>
+            <br><br>
+                <input type="submit" value="Submit">
+        </form>
+    </div>
+        <br><br><br><footer> copyright by Daniel {{current_year}}</footer>
+    </div>
+</body>
+
+</html>
